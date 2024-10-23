@@ -1,0 +1,52 @@
+.card:hover {
+  background-color: #1d1d1d;
+  color: white;
+}
+.card {
+  height: 200px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.product-image {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-details{
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.red{
+  background-color: red;
+}
+
+.green{
+  background-color: greenyellow;
+}
+
+.gray{
+  background-color: gray;
+}
+
+.violet{
+  background-color: violet;
+}
+
