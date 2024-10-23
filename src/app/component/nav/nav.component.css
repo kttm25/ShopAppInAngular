@@ -1,19 +1,16 @@
-.nav {
+nav {
   display: flex;
-  flex: 2;
   font-size: 1rem;
-  padding-right: 10px;
   color: white;
 }
 
 ul {
   list-style: none;
   color: white;
-  gap: 100px;
 }
 
 @media screen and(max-width: 900px) {
-  .nav{
+  nav{
     display: none;
   }
 }
