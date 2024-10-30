@@ -8,7 +8,6 @@ import { User } from '../../../models/user';
 })
 export class SignupComponent implements OnInit{
   user: User = {
-    _id: "",
     firstname: "",
     lastname: "",
     email: "",
