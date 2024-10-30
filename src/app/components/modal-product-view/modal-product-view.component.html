@@ -1,0 +1,24 @@
+<div class="modal-product-view" >
+  <div class="overlay"></div>
+  <div class="modal-product-view-container flex">
+    <div class="modal-product-view-image flex-1">
+      <img
+        [src]="product ? product.imageUrl[0]  : ''"
+        [alt]="product?.name">
+    </div>
+    <div class="modal-product-view-details flex-1">
+      <h2>{{product?.name}}</h2>
+      <div class="modal-product-view-details-price flex flex-1 aic jcc column">
+        <h4> $ {{product?.soldPrice}}</h4>
+        <del>
+          <h4> $ {{product?.regularPrice}}</h4>
+        </del>
+      </div>
+      <div class="modal-product-view-created-at">
+        Crée le {{product?.created_At | date:"dd:MM:YYYY"}}
+      </div>
+
+      <button class="btn btn-close" (click)="handleCloseModal()">Fermer</button>
+    </div>
+  </div>
+</div>

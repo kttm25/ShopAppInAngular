@@ -3,8 +3,8 @@
   color: white;
 }
 .card {
-  height: 200px;
-  width: 150px;
+  height: 300px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,8 +14,8 @@
 }
 
 .product-image {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 300px;
   border: 1px solid black;
   color: white;
   display: flex;
@@ -24,9 +24,14 @@
   align-items: center;
 }
 
+.product-image img {
+  height: 200px;
+  width: 300px;
+}
+
 .product-details{
   height: 50px;
-  width: 150px;
+  width: 300px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;

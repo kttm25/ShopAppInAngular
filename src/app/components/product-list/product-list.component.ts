@@ -122,7 +122,19 @@ export class ProductListComponent {
     }
   ];
 
+  showModal = false;
+  productSelect: Product | undefined
+
   handleDeleteProduct(product: Product){
     this.products = this.products.filter(item => item._id !== product._id)
+  }
+
+  handleGetProduct(product: Product){
+    this.productSelect = product
+  }
+
+  handleShowProductDetails(showState : boolean){
+    console.log(showState)
+    this.showModal = showState;
   }
 }
