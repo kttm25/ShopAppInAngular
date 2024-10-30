@@ -1,0 +1,25 @@
+<div class="signup">
+  <div class="form-container">
+    <form action="">
+      <h2>Inscription</h2>
+      <div class="form-line flex gap-10 wrap">
+        <input class="flex-1" type="text" name="firstname" placeholder="Your firstname" [(ngModel)]="user.firstname">
+        <input class="flex-1" type="text" name="lastname" placeholder="Your lastname" [(ngModel)]="user.lastname">
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="email" name="email" placeholder="Your email" [(ngModel)]="user.email">
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="password" name="password" placeholder="Your password" [(ngModel)]="user.password">
+      </div>
+      <div class="form-line flex">
+        <input class="flex-1" type="password" name="passwordconfirm" placeholder="Confirm your password">
+      </div>
+
+      <div class="button flex">
+        <button class="btn flex-1" (click)="handleSubmit()">S'inscrire</button>
+      </div>
+      <p>{{user | json}}</p>
+    </form>
+  </div>
+</div>

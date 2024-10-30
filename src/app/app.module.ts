@@ -10,6 +10,9 @@ import { NavComponent } from './components/nav/nav.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { ModalProductViewComponent } from './components/modal-product-view/modal
     NavComponent,
     ProductComponent,
     ProductListComponent,
-    ModalProductViewComponent
+    ModalProductViewComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
