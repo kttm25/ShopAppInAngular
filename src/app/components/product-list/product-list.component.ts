@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Product } from '../../models/product';
 import { ProductService } from '../../services/product.service';
+import { Subscription } from 'rxjs';
+import { subscribe } from 'diagnostics_channel';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, OnDestroy {
 
   products: Product[] = [];
+
+  productsSub: Subscription | undefined;
 
   showModal = false;
   productSelect: Product | undefined
@@ -16,10 +20,19 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService){
 
   }
+
   ngOnInit(): void {
-    this.productService.getProducts().then((result)=>{
-      this.products = result
-    }).catch((e) => this.products = [])
+    this.productsSub = this.productService.getProducts().subscribe(
+      {
+        next: (products: Product[]) => this.products = products,
+        error: (error: Error) => console.log(error),
+        complete: () => console.log("complete"),
+      }
+    )
+  }
+
+  ngOnDestroy(): void {
+    this.productsSub?.unsubscribe()
   }
 
   handleDeleteProduct(product: Product){
