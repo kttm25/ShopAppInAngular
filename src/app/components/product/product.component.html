@@ -1,13 +1,1 @@
-<div class="card" (click)="handleClick(product)">
-  <div class="product-image">
-    <img
-      src="{{ (product ? (product.imageUrl ? product.imageUrl[0] : '' ): '')}}"
-      [alt]="product?.name">
-  </div>
-  <div class="product-details">
-    <div class="title">{{product?.name?.substring(0,40)}} {{ product && product.name[41] ? '...' : '' }}</div>
-    <div class="price">
-      {{product?.soldPrice}}$ - <del>{{product?.regularPrice}}$</del>
-     </div>
-  </div>
-</div>
+<p>product works!</p>

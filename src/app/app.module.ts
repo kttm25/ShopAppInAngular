@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProductComponent } from './components/product/product.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
@@ -22,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MainComponent,
     NavComponent,
     ProductComponent,
+    ProductCardComponent,
     ProductListComponent,
     ModalProductViewComponent,
     SigninComponent,

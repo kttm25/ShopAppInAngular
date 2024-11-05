@@ -1,16 +1,14 @@
 <div class="product-list">
-  <app-product
-    *ngFor="let item of products"
-    [product]="item"
+  <a *ngFor="let product of products" [routerLink]="['product', product._id]">
+    <app-product-card [product]="product" (showProductDetails)="handleShowProductDetails($event)"
+    (getProductItem)="handleGetProduct($event)"></app-product-card>
+  </a>
 
-    (showProductDetails)="handleShowProductDetails($event)"
-    (getProductItem)="handleGetProduct($event)"
-    ></app-product>
 
-    <div class="bar"
-      *ngIf="!products.length">
-      Désolé, aucun article n'est disponible pour le moment
-    </div>
+  <div class="bar" *ngIf="!products.length">
+    Désolé, aucun article n'est disponible pour le moment
+  </div>
 
-    <app-modal-product-view *ngIf="showModal" (showModal)="handleShowProductDetails($event)" [product]="productSelect"></app-modal-product-view>
+  <app-modal-product-view *ngIf="showModal" (showModal)="handleShowProductDetails($event)"
+    [product]="productSelect"></app-modal-product-view>
 </div>

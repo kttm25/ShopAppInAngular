@@ -1,5 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../../models/product';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -7,15 +6,5 @@ import { Product } from '../../models/product';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  @Input() product: Product | undefined;
 
-  @Output() showProductDetails : EventEmitter<boolean> = new EventEmitter<boolean>()
-  @Output() deleteProductItem : EventEmitter<Product> = new EventEmitter<Product>()
-  @Output() getProductItem : EventEmitter<Product> = new EventEmitter<Product>()
-
-  handleClick(product: Product | undefined){
-    //this.deleteProductItem.emit(product)
-    this.showProductDetails.emit(true);
-    this.getProductItem.emit(product)
-  }
 }

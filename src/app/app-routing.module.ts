@@ -3,11 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { ProductComponent } from './components/product/product.component';
 
 const routes: Routes = [
   {
     path: '',
     component: MainComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'product/:id',
+    component: ProductComponent,
     pathMatch: 'full'
   },
   {
