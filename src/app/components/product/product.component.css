@@ -13,4 +13,20 @@
   margin-left: 20px;
 }
 
+@media screen and (max-width: 900px) {
+  .single-product{
+   flex-direction: column;
+  }
+  .single-product .single-product-image {
+    justify-content: center;
+  }
+}
 
+@media screen and (max-width: 400px) {
+  .single-product{
+   flex-direction: column;
+  }
+  .single-product .single-product-image img{
+    width: 95%;
+  }
+}
