@@ -1,4 +1,4 @@
-<div class="card" (click)="handleClick(product)">
+<div class="card">
   <div class="product-image">
     <img
       src="{{ (product ? (product.imageUrl ? product.imageUrl[0] : '' ): '')}}"
@@ -9,5 +9,9 @@
     <div class="price">
       {{product?.soldPrice}}$ - <del>{{product?.regularPrice}}$</del>
      </div>
+  </div>
+  <div class="product-action-button flex gap-5 jcc">
+   <button class="btn" (click)="handleClick(product)">Quick view</button>
+   <button class="btn" [routerLink]="['product', product?.slug]">All details</button>
   </div>
 </div>
