@@ -13,8 +13,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
   products: Product[] = [];
 
   productsSub: Subscription | undefined;
-
   showModal = false;
+  isLoading : boolean = true;
   productSelect: Product | undefined
 
   constructor(private productService: ProductService){
@@ -24,8 +24,14 @@ export class ProductListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.productsSub = this.productService.getProducts().subscribe(
       {
-        next: (products: Product[]) => this.products = products,
-        error: (error: Error) => console.log(error),
+        next: (products: Product[]) => {
+          this.products = products
+          this.isLoading = false;
+        },
+        error: (error: Error) => {
+          console.log(error);
+          this.isLoading = true;
+        },
         complete: () => console.log("complete"),
       }
     )

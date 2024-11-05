@@ -1,11 +1,13 @@
-<div class="product-list">
+<app-loading *ngIf="isLoading"></app-loading>
+
+<div class="product-list" *ngIf="!isLoading" >
   <div *ngFor="let product of products">
     <app-product-card [product]="product" (showProductDetails)="handleShowProductDetails($event)"
     (getProductItem)="handleGetProduct($event)"></app-product-card>
   </div>
 
 
-  <div class="bar" *ngIf="!products.length">
+  <div class="bar" *ngIf="!isLoading && !products.length">
     Désolé, aucun article n'est disponible pour le moment
   </div>
 
