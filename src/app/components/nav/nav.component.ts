@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  navItems: string[] = ["Home", "Product", "Blog", "Contact"]
+
 }

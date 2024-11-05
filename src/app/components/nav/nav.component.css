@@ -5,8 +5,16 @@ nav {
 }
 
 ul {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
   list-style: none;
   color: white;
+}
+
+li {
+  flex: 1;
+  padding-left: 1rem;
 }
 
 @media screen and(max-width: 900px) {
