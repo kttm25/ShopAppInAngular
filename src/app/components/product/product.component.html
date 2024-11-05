@@ -1,1 +1,18 @@
-<p>product works!</p>
+<div class="single-product flex content">
+  <div class="single-product-image flex flex-1">
+    <img [src]="product ? product.imageUrl[0]  : ''" [alt]="product?.name">
+  </div>
+  <div class="single-product-details flex-1">
+
+    <h2>{{product?.name}}</h2>
+    <div class="modal-product-view-details-price flex flex-1 aic jcc column">
+      <h4>{{product?.soldPrice | currency: "CAD"}}</h4>
+      <del>
+        <h4>{{product?.regularPrice | currency: "CAD"}}</h4>
+      </del>
+    </div>
+    <div class="modal-product-view-created-at">
+      Crée le {{product?.created_At | date:"dd:MM:YYYY"}}
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="product-list">
-  <a *ngFor="let product of products" [routerLink]="['product', product._id]">
+  <a *ngFor="let product of products" [routerLink]="['product', product.slug]">
     <app-product-card [product]="product" (showProductDetails)="handleShowProductDetails($event)"
     (getProductItem)="handleGetProduct($event)"></app-product-card>
   </a>

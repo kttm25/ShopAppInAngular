@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'product/:id',
+    path: 'product/:slug',
     component: ProductComponent,
     pathMatch: 'full'
   },
