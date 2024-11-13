@@ -19,6 +19,7 @@ li {
 
 a {
   text-decoration: none;
+  text-transform: uppercase;
   color: inherit;
 }
 

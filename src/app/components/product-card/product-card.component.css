@@ -2,21 +2,23 @@
   background-color: #1d1d1d;
   color: white;
 }
+
 .card {
   height: 300px;
-  width: 300px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  margin: 10px;
   cursor: pointer;
+  border: 0.11px solid #ccc;
+  box-shadow: 6px 3px 13px -4px rgba(0,0,0,0.66);
 }
 
 .product-image {
   height: 200px;
-  width: 300px;
-  border: 1px solid black;
+  width: 250px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -26,17 +28,42 @@
 
 .product-image img {
   height: 200px;
-  width: 300px;
+  width: 250px;
 }
 
 .product-details{
-  height: 50px;
-  width: 300px;
-  border: 1px solid black;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.product-details .product-name h2{
+  padding: 0 10px;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.product-details .product-price{
+  display: flex;
+  padding-bottom: 15px;
+  row-gap: 0;
+  column-gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #3f51b5;
+}
+
+.product-details .product-price h3{
+  margin: 5px;
+}
+
+.product-details .product-price button{
+  width: auto;
+  margin: 0;
+  align-self: center;
+  background-color: #3f51b5;
 }
 
 .red{
