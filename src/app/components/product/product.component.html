@@ -2,8 +2,12 @@
 
 <div class="single-product flex content" *ngIf="!isLoading">
   <div class="single-product-image flex gap-10 flex-1">
-    <div class="single-product-view-image-list">
-      <img *ngFor="let item of product?.imageUrl" (click)="handleChangeImage(item)" [src]="product ? item : ''" [alt]="product?.name">
+    <div class="single-product-view-image-list flex aic column gap-10">
+      <img *ngFor="let item of product?.imageUrl"
+        [src]="product ? item : ''"
+        [alt]="product?.name"
+        (click)="handleChangeImage(item)"
+        [ngClass]="{'current' : item === currentImage}">
     </div>
     <div class="single-product-view-image-current">
       <img [src]="product ? currentImage : ''" [alt]="product?.name">
