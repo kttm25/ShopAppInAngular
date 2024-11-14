@@ -16,28 +16,32 @@ body {
   border: 0.1px solid black;
 }
 
-.flex, .row {
+.flex,
+.row {
   display: flex;
 }
 
-.flex-1{
+.flex-1 {
   flex: 1;
 }
 
-.flex-2{
+.flex-2 {
   flex: 2;
 }
 
-.aic{
+.aic {
   align-items: center;
 }
 
-.jcc{
+.jcc {
   justify-content: center;
 }
 
-.column{
+.column {
   flex-direction: column;
+}
+.tc{
+  text-align: center;
 }
 
 .btn {
@@ -68,6 +72,19 @@ body {
   min-height: 70vh;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.error {
+  color: red;
+}
+
+form p{
+  margin: 0;
+}
+
 @media screen and (max-width: 1200px) {
   .content {
     width: 90%;
@@ -91,7 +108,7 @@ body {
   align-items: center;
 }
 
-.form-container{
+.form-container {
   width: 600px;
   position: relative;
   border: 0.1px solid #ccc;
@@ -106,7 +123,7 @@ form {
   padding: 10px 0;
 }
 
-form .form-line input{
+form .form-line input {
   font-size: 1.1rem;
   height: 40px;
 }

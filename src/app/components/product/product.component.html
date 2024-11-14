@@ -1,8 +1,13 @@
 <app-loading *ngIf="isLoading"></app-loading>
 
 <div class="single-product flex content" *ngIf="!isLoading">
-  <div class="single-product-image flex flex-1">
-    <img [src]="product ? product.imageUrl[0]  : ''" [alt]="product?.name">
+  <div class="single-product-image flex gap-10 flex-1">
+    <div class="single-product-view-image-list">
+      <img *ngFor="let item of product?.imageUrl" (click)="handleChangeImage(item)" [src]="product ? item : ''" [alt]="product?.name">
+    </div>
+    <div class="single-product-view-image-current">
+      <img [src]="product ? currentImage : ''" [alt]="product?.name">
+    </div>
   </div>
   <div class="single-product-details flex-1 ">
     <h2 class="flex aic jcc">{{product?.name}}</h2>

@@ -3,14 +3,14 @@
   height: 400px;
   background-color: white;
   position: fixed;
-  z-index: 888;
+  z-index: 988;
   top: 20%;
   left: 30%;
 }
 
 .overlay{
   position: fixed;
-  z-index: 99;
+  z-index: 900;
   height: 100%;
   width: 100%;
   top: 0;
@@ -26,7 +26,24 @@
 
 .modal-product-view-details {
   text-align: center;
+}
 
+.modal-product-view-details .btn {
+  width: 90%;
+  height: 45px;
+  background-color: #3f51b5;
+}
+
+.modal-product-view-details-price h4{
+  font-size: 3rem;
+  color: #3f51b5;
+  margin: 30px;
+}
+
+.modal-product-view-details-price del h4{
+  font-size: 2rem;
+  color: #3f51b5;
+  margin: 30px;
 }
 
 @media screen and (max-width: 660px) {

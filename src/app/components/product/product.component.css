@@ -5,12 +5,17 @@
 .single-product .single-product-image {
   justify-content: flex-end;
 }
-.single-product .single-product-image img{
-  width: 400px;
-}
 
 .single-product .single-product-details{
   margin-left: 20px;
+}
+
+.single-product .single-product-view-image-list img{
+  width: 100px;
+}
+
+.single-product .single-product-view-image-current img{
+  width: 100%;
 }
 
 @media screen and (max-width: 900px) {

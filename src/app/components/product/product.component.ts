@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit, OnDestroy{
   product: Product | undefined;
   productssub : Subscription | undefined;
   isLoading: boolean = true;
+  currentImage: string | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,12 +24,17 @@ export class ProductComponent implements OnInit, OnDestroy{
 
   }
 
+  handleChangeImage(currentImage: string | undefined){
+    this.currentImage = currentImage;
+  }
+
   ngOnInit(): void {
     this.slug = this.route.snapshot.params['slug']
     this.productssub = this.productService.getProducts().subscribe({
       next: (products: Product[]) => {
         this.product = products.filter((product) =>(product.slug === this.slug))[0]
-        this.isLoading = false
+        this.isLoading = false;
+        this.currentImage = this.product.imageUrl[0];
       },
       error: (error: Error) => {
         console.log(error)

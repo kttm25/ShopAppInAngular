@@ -1,7 +1,8 @@
 <div class="signup">
   <div class="form-container">
-    <form action="" [formGroup]="signInFOrm">
-      <h2>Connexion</h2>
+    <form action="" [formGroup]="signInForm">
+      <h2 class="tc">Connexion</h2>
+      <p class="tc"> Vous ne vous etes pas encore inscrit ? Cliquer ici <a routerLink="/signup">Signup</a></p>
       <div class="form-line flex">
         <input class="flex-1" type="email" name="email" placeholder="Your email" [formControl]="email">
       </div>
@@ -27,7 +28,7 @@
       </div>
 
       <div class="button flex">
-        <button class="btn flex-1" [disabled]="!signInFOrm.valid" (click)="handleSubmit()">S'inscrire</button>
+        <button class="btn flex-1" [disabled]="!signInForm.valid" (click)="handleSubmit()">S'inscrire</button>
       </div>
 
     </form>

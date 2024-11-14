@@ -14,21 +14,21 @@ export class SigninComponent {
     password: ""
   }
 
-  signInFOrm: FormGroup;
+  signInForm: FormGroup;
   email: FormControl;
   password: FormControl;
 
   constructor(private fb: FormBuilder){
     this.email = fb.control("", [Validators.email, Validators.required]);
     this.password = fb.control("", [Validators.required, Validators.minLength(6)]);
-    this.signInFOrm = fb.group({
+    this.signInForm = fb.group({
       email: this.email,
       password: this.password
     })
   }
 
   handleSubmit(){
-    console.log(this.signInFOrm.valid)
+    console.log(this.signInForm.valid)
   }
 
 }

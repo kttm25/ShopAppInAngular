@@ -1,7 +1,8 @@
 <div class="signup">
   <div class="form-container">
     <form action="">
-      <h2>Inscription</h2>
+      <h2 class="tc">Inscription</h2>
+      <p class="tc"> Vous avez deja un compte? Cliquer ici <a routerLink="/signin">Signin</a></p>
       <div class="form-line flex gap-10 wrap">
         <input class="flex-1" type="text" name="firstname" placeholder="Your firstname" [(ngModel)]="user.firstname">
         <input class="flex-1" type="text" name="lastname" placeholder="Your lastname" [(ngModel)]="user.lastname">
