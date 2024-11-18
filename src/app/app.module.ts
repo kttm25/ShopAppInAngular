@@ -16,6 +16,7 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './components/loading/loading.component';
+import { PaymentMethodsComponent } from './components/payment-methods/payment-methods.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     ModalProductViewComponent,
     SigninComponent,
     SignupComponent,
-    LoadingComponent
+    LoadingComponent,
+    PaymentMethodsComponent
   ],
   imports: [
     BrowserModule,

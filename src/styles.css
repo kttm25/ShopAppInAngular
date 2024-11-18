@@ -139,6 +139,10 @@ form .form-line input {
   font-size: 1.4rem;
 }
 
+.btn-main{
+  background-color: #3f51b5;
+}
+
 @media screen and (max-width: 550px) {
   .form-container {
     width: 95%;

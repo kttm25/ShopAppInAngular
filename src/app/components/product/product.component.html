@@ -3,11 +3,8 @@
 <div class="single-product flex content" *ngIf="!isLoading">
   <div class="single-product-image flex gap-10 flex-1">
     <div class="single-product-view-image-list flex aic column gap-10">
-      <img *ngFor="let item of product?.imageUrl"
-        [src]="product ? item : ''"
-        [alt]="product?.name"
-        (click)="handleChangeImage(item)"
-        [ngClass]="{'current' : item === currentImage}">
+      <img *ngFor="let item of product?.imageUrl" [src]="product ? item : ''" [alt]="product?.name"
+        (mouseover)="handleChangeImage(item)" [ngClass]="{'current' : item === currentImage}">
     </div>
     <div class="single-product-view-image-current">
       <img [src]="product ? currentImage : ''" [alt]="product?.name">
@@ -15,18 +12,21 @@
   </div>
   <div class="single-product-details flex-1 ">
     <h2 class="flex aic jcc">{{product?.name}}</h2>
-    <div class="single-product-details-price flex-1 flex aic jcc column">
+    <div class="single-product-details-price flex-1 flex aic jcc gap-10">
       <h4>{{product?.soldPrice | currency: "CAD"}}</h4>
       <del>
         <h4>{{product?.regularPrice | currency: "CAD"}}</h4>
       </del>
+      <h4> {{ product ? ((product.regularPrice - product.soldPrice)/product.regularPrice | percent): ""}}</h4>
     </div>
     <div class="single-product-details-created-at flex aic jcc">
       Crée le {{product?.created_At | date:"dd:MM:YYYY"}}
     </div>
 
-  <div class="product-action-button flex aic jcc">
-    <button class="btn" >Pay now</button>
-   </div>
+    <div class="product-action-button flex column aic jcc">
+      <button class="btn flex-1 btn-main">Pay now</button>
+      <button class="btn flex-1 btn-main">Add to card</button>
+      <app-payment-methods class="flex-1"></app-payment-methods>
+    </div>
   </div>
 </div>
